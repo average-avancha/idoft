@@ -73,5 +73,29 @@ Update all the variables before running the script. You can also change the numb
 
 Multiple output files will be generated. One log file will be generated for one run of the test. Also a final output file will be generated (output_file) which contains the result of all the tests.
 
-First set up permissions by doing ```chmod +x run_single.sh``` and then run the script ```./run_single.sh```.
+Run the script with the following command:
+ `./run_single.sh <Project Path> <Module> <Test Name> <nondex_runs> <nondex_seed> <rounds>`.
 
+
+Arguments:
+
+```
+Project Path - Global path to the project location. 
+        ex: "/home/dubbo"
+
+Module - Module path within the project.
+        ex: "dubbo-common"
+
+Test Name - Fully-Qualified Test Name 
+        ex: "org.apache.dubbo.common.utils.PojoUtilsTest.test_Loop_pojo"
+        NOTE: packageName.ClassName#methodName should use "#" before methodName instead of "."
+
+nondex_runs - Number of nondex_runs
+        ex: 1
+
+nondex_seed - Value for nondex_seed
+        ex: "974622"
+
+rounds - Number of rounds running the same test
+        ex: 10
+```
