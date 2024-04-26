@@ -8,6 +8,7 @@ from common_checks import (
     check_row_length,
     check_sort,
     run_checks,
+    check_duplication
 )
 
 
@@ -53,7 +54,8 @@ data = {
         "MovedOrRenamed",
         "Claimed",
         "MovedToGradle",
-        "FixedOrder"
+        "FixedOrder",
+        "Unmaintained"
     ],
     "PR Link": re.compile(
         r"((https:\/\/github.com\/((\w|\.|-)+\/)+)(pull\/\d+))"
@@ -190,3 +192,4 @@ def run_checks_pr(filename, log, commit_range):
     ]
     run_checks(filename, data, log, commit_range, checks)
     check_sort(filename, log)
+    check_duplication(filename, log)
