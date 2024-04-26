@@ -69,9 +69,9 @@ runsingleNondex () {
     if [ $error_count -eq 0 ]; then
         echo "All rounds passed. " >> "$output_file"
     elif [ $error_count -eq $ROUNDS ]; then
-        echo "All rounds failed. Flaky test likely ID." >> "$output_file"
+        echo "All rounds failed. Likely Implementation Dependent (ID) Flaky test." >> "$output_file"
     else
-        echo "Some rounds failed. Flaky test likely NOD." >> "$output_file"
+        echo "Some rounds failed. Likely Not Implementation Dependent (NID) Flaky test." >> "$output_file"
     fi
 }
 

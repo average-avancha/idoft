@@ -67,7 +67,7 @@ With the second parameter in `./runNondex.sh`, you can only run Nondex on module
 
 # `run_single_nondex`
 
-This script will run a single test with a particular seed value multiple number of times. This is useful to determine if a test is ID or NOD. For example, if a test fails 10(number can be changed) times with the same seed, then it is ID. If it fails some times and passes sometimes, then it is NOD.
+This script will run a single test with a particular seed value multiple number of times. This is useful to determine if a test is ID or NID. For example, if a test fails 10(number can be changed) times with the same seed, then it is likely ID. If it fails some times and passes sometimes, then it is likely NID.
 
 Update all the variables before running the script. You can also change the number of runs (currently it is 10).
 
